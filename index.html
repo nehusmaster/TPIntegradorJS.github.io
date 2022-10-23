@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostrap</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body  class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img src="/multimedia/codoacodo.png" style="height: 100px; width: 200px;"></a>
+            <h5 class="whiteColour">Conf Bs. As.</h5>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <h6 class="whiteColour">La conferencia</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <h6 class="whiteColour">Los oradores</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <h6 class="whiteColour">El lugar y la fecha</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <h6 class="whiteColour">Conviértete en orador</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <h6 class="GreenText">comprar tickets</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="text-align:center;">
+        <div class="row" style="padding: 1% 15% 1% 15%;">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Estudiante</h1>
+                        <p class="card-text">Tienen un descuento:</p>
+                        <h4 class="card-title">80%</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Trainee</h1>
+                        <p class="card-text">Tienen un descuento:</p>
+                        <h4 class="card-title">50%</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Junior</h1>
+                        <p class="card-text">Tienen un descuento:</p>
+                        <h4 class="card-title">15%</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="text-align:center;">
+        <h4>Venta</h4>
+        <h1>
+            Valor del ticket $200
+        </h1>
+    </div>
+
+    <div class="container" style="padding-bottom: 50px;">
+
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+            </div>
+
+            <div class="col-6">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+            </div>
+            
+            <div class="col-12" style="padding-top: 20px;">
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Mail">
+            </div>
+
+            <div class="col-6" style="padding-top: 10px;">
+                <label for="">cantidad</label>
+                <input type="number" class="form-control" id="cantidadID" placeholder="Cantidad">
+            </div>
+
+            <div class="form-group col-6" style="padding-top: 10px;">
+                <label for="">categoría</label>
+                <select id="inputState" class="form-control">
+                  <option value="80">Estudiante</option>
+                  <option value="50">Trainee</option>
+                  <option value="15">Junior</option>
+                </select>
+              </div>
+
+            <div class="col-12" style="padding-top: 20px;">   
+                <div class="alert alert-primary" role="alert">
+                    <p>Total a pagar: <span id="resultadoID"></span> </p> 
+                </div>  
+            </div>           
+            
+            <div class="col-12" style="padding-top: 20px;">   
+                <div class="d-grid gap-2">
+                    <button onclick="borrar();" type="button" class="btn btn-success">
+                        Borrar
+                    </button>
+                    <button onclick="MostrarEnPantalla()" type="button" class="btn btn-success">
+                        Resumen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-primary bg-gradient text-white-50 mt-auto">
+        <div class="container text-center">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2" style="color: white;">Preguntas frecuentes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2" style="color: white;">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2" style="color: white;">Prensa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2" style="color: white;">Conferencias</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2" style="color: white;">Términos y condiciones</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2" style="color: white;">Privacidad</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2" style="color: white;">Estudiantes</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
